@@ -21,10 +21,8 @@ public class Driver {
 						
 			} catch(NumberFormatException e) {
 						
-				stringIdList.add(input);
-						
+				stringIdList.add(input);			
 			}
-
 		}	
 		
 		// Bubble Sort ArrayList<Integer>
@@ -36,9 +34,7 @@ public class Driver {
 				if (numIdList.get(j) > numIdList.get(j + 1)) {
 					Collections.swap(numIdList, j , j + 1);	
 				}
-			
 			}
-			
 		}
 		
 		// Bubble Sort ArrayList<String>
@@ -46,19 +42,12 @@ public class Driver {
 		for (int i = 0; i < size - 1; i++) {
 			
 			for (int j = 0; j < size - 1 - i; j++) {
-			
+				
 				if (stringIdList.get(j).compareTo(stringIdList.get(j + 1)) > 0) {
 					Collections.swap(stringIdList, j , j + 1);	
-				}
-				
+				}	
 			}
-			
 		}
-		
-		for (int i = 0; i < numIdList.size(); i++) {
-			System.out.println(numIdList.get(i));	
-		}
-		System.out.println();
 		
 		size = numIdList.size() + stringIdList.size();
 		for (int i = 0; i < size; i++) {
@@ -69,14 +58,8 @@ public class Driver {
 			
 			for (int k = 0; k < stringIdList.size(); k++) {
 				idList.add(stringIdList.get(k));	
-			}
-			
-		}
-		
-		for (int i = 0; i < size; i++) {
-			System.out.println(idList.get(i));	
-		}
-		
+			}	
+		}		
 		
 	}
 }	
