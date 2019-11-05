@@ -18,12 +18,12 @@ epi1
 ### Sample Output:
 0
 
+2
+
+5
+
 epi1
 
 epi2
 
-2
-
 epi3
-
-5
