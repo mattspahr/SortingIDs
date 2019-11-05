@@ -61,5 +61,18 @@ public class Driver {
 			}	
 		}		
 		
+		// Write idList to output.csv
+		try {
+			FileWriter csvWriter = new FileWriter("data/output.csv");
+			String c = ",";
+			for (int i = 0; i < size; i++) {
+				csvWriter.append(idList.get(i));
+				csvWriter.append(c);
+			}
+			csvWriter.flush();
+			csvWriter.close();
+		} catch (IOException e) {
+			System.out.println("Error");	
+		}
 	}
 }	
