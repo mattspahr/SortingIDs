@@ -71,6 +71,7 @@ public class Driver {
 			}
 			csvWriter.flush();
 			csvWriter.close();
+			System.out.println("Data written to data/output.csv");
 		} catch (IOException e) {
 			System.out.println("Error");	
 		}
