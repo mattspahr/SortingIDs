@@ -10,6 +10,9 @@ public class Driver {
 		ArrayList<String> stringIdList = new ArrayList<String>();
 		ArrayList<String> idList = new ArrayList<String>();
 		
+		/*
+			Take user input and build lists
+		*/
 		System.out.println("Please enter list. Enter key with no input to end.");
 		String input;
 		while((input = keyboard.nextLine()).length() > 0) {
@@ -25,7 +28,7 @@ public class Driver {
 			}
 		}	
 		
-		// Bubble Sort ArrayList<Integer>
+		// Bubble Sort ArrayList<Integer> numIdList
 		int size = numIdList.size();
 		for (int i = 0; i < size - 1; i++) {
 			
@@ -37,7 +40,7 @@ public class Driver {
 			}
 		}
 		
-		// Bubble Sort ArrayList<String>
+		// Bubble Sort ArrayList<String> stringIdList
 		size = stringIdList.size();
 		for (int i = 0; i < size - 1; i++) {
 			
@@ -49,6 +52,9 @@ public class Driver {
 			}
 		}
 		
+		/*
+			Build idList from numIdList and stringIdList, mainting the sorted order
+		*/
 		size = numIdList.size() + stringIdList.size();
 		for (int i = 0; i < size; i++) {
 		
@@ -61,7 +67,9 @@ public class Driver {
 			}	
 		}		
 		
-		// Write idList to output.csv
+		/* 
+			Write idList to output.csv
+		*/
 		try {
 			FileWriter csvWriter = new FileWriter("data/output.csv");
 			String c = ",";
